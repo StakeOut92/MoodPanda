@@ -10,7 +10,7 @@ public class MainPage {
     private ElementsCollection globalFeedTitle = $$(By.xpath("//p[text()='Global feed']"));
 
     public int getTitleQuantity(){
-        globalFeedTitle.get(0).shouldBe(Condition.visible);
+        globalFeedTitle.get(1).shouldBe(Condition.visible);
         return globalFeedTitle.size();
     }
 }
