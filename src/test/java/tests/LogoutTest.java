@@ -3,7 +3,6 @@ package tests;
 import org.testng.annotations.Test;
 import pages.LogoutPage;
 import pages.MainPage;
-import staticdata.LoginData;
 
 public class LogoutTest extends BaseTest{
 
