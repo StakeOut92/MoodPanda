@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MoodPanda Test" parallel="classes">
+    <test name="test 1">
+        <classes>
+            <class name="tests.LoginTest"> </class>
+            <class name="tests.LogoutTest"> </class>
+            <class name="tests.DiaryTest"> </class>
+            <class name="tests.DashBoardTest"></class>
+            <parameter name="browser" value="chrome"></parameter>
+        </classes>
+    </test> <!-- Test -->
+</suite>

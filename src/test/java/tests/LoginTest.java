@@ -7,14 +7,11 @@ import pages.MainPage;
 
 public class LoginTest extends BaseTest{
 
-    private static final String EMAIL = "anyway123@yopmail.com";
-    private static final String PASSWORD = "Lostsoul_92";
-
-    @Test
+    @Test(description = "This test check that login page is enable and login is successful")
     public void loginTest(){
         LoginPage loginPage = new LoginPage();
         loginPage.openLoginPage();
-        loginPage.login(EMAIL,PASSWORD);
+        loginPage.login();
         MainPage mainPage = new MainPage();
         Assert.assertEquals(mainPage.getTitleQuantity(),2,"Quantity of title isn't expected");
     }

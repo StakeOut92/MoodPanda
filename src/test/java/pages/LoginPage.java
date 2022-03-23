@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+import staticdata.LoginData;
 import staticdata.WebUrls;
 
 import static com.codeborne.selenide.Condition.enabled;
@@ -24,7 +25,7 @@ public class LoginPage {
      */
     private SelenideElement emailInput = $(By.xpath("//input[@placeholder='MoodPanda registered email ']"));
     private SelenideElement passwordInput = $(By.xpath("//input[@name='password']"));
-    private SelenideElement loginButton = $(By.xpath("//button[contains(.,'Login')]"));
+
 
     public void openLoginPage(){
         open(baseUrl.concat(WebUrls.LOGIN_URL));
@@ -32,15 +33,12 @@ public class LoginPage {
 
     /**
      * Method performs login to Mood Panda
-     * @param email
-     * @param password
      */
 
-    public void login(String email, String password){
-        loginButton.shouldBe(enabled);
-        emailInput.sendKeys(email);
-        passwordInput.sendKeys(password);
-        loginButton.click();
-
+    public void login(){
+        LoginData.loginButton.shouldBe(enabled);
+        emailInput.sendKeys(LoginData.EMAIL);
+        passwordInput.sendKeys(LoginData.PASSWORD);
+        LoginData.loginButton.click();
     }
 }

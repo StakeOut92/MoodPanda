@@ -1,7 +1,5 @@
 package tests;
-
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Driver;
 import com.codeborne.selenide.Selenide;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
